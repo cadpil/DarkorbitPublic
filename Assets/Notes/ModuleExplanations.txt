@@ -1,0 +1,8 @@
+Optimal mass is the mass at which the thrusters are designed for. Having less mass than optimal 
+will result in better ship handling (higher speeds, better turning etc.). Having more mass than optimal
+will result in worse ship handling (lower speeds, worse turning etc.). If a ship's mass exceeds it's thruster's 
+maximum mass, the ship will not be able to move. When a ship's mass is equal to the thruster's optimal mass,
+the ship will have a maximum speed of the 'OptimalMassSpeed' of the thrusters. As the ship gets heavier, the
+maximum speed of the ship will decrease all the way to 0 (0 will only be reached if the ship's mass is equal
+to or greater than the ship's maximum mass). As the ship gets lighter, the maximum speed of the ship will increase
+up to 50% more than the thruster's 'OptimalMassSpeed'. The same applies for acceleration.
