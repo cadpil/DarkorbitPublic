@@ -17,9 +17,16 @@
 
     "StarterPlayer": {
       "StarterPlayerScripts": {
+        "$path": "src/StarterPlayerScripts",
         "Client": {
           "$path": "src/client"
         }
+      }
+    },
+
+    "ServerStorage": {
+      "Modules": {
+        "$path": "src/modules"
       }
     },
 

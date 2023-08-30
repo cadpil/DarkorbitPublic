@@ -1,6 +1,8 @@
 # Project place file
 /DarkOrbit.rbxlx
 
+.vscode/
+
 # Roblox Studio lock files
 /*.rbxlx.lock
 /*.rbxl.lock
