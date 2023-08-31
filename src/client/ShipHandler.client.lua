@@ -74,32 +74,22 @@ local function mouseMoved(actionName, inputState, inputObject)
 end
 
 ReplicatedStorage.Events.ShipRelated.BoardShip.OnClientEvent:Connect(function(shipInfo) 
-    shipUI.Enabled = true
-    ship = shipInfo.shipInstance
-    seat = shipInfo.seat
-    gyro = shipInfo.angularVelocity
-    velocity = shipInfo.linearVelocity
-
+    -- shipUI.Enabled = true
+    -- ship = shipInfo.shipInstance
+    -- seat = shipInfo.seat
+    -- gyro = shipInfo.angularVelocity
+    -- velocity = shipInfo.linearVelocity
     print(shipInfo)
-    local methods = table.clone(shipInfo[2])
-    print(methods)
 
-    setmetatable(shipInfo[1], methods)
-    shipInfo = shipInfo[1]
+    -- for _, part in pairs(character:GetDescendants()) do
+    --     if part:IsA("BasePart") then
+    --         part.Transparency = 1
+    --     end
+    -- end
 
-    print(getmetatable(shipInfo))
+    -- shipInfo:Setup()
 
-
-
-    for _, part in pairs(character:GetDescendants()) do
-        if part:IsA("BasePart") then
-            part.Transparency = 1
-        end
-    end
-
-    shipInfo:Setup()
-
-    runService:BindToRenderStep("ShipHandler", 99, handleShip)
+    -- runService:BindToRenderStep("ShipHandler", 99, handleShip)
 end)
 
 -- When the mouse is moved, call the 'mouseMoved' function

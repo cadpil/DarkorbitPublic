@@ -11,13 +11,28 @@ game.Players.PlayerAdded:Connect(function(player)
     local shipInstance = shipsFolder:FindFirstChild("Eagle"):Clone()
 
     local shipModules = {
-        Thrusters = {
-            Size=1,
-            Class = "D",
-        },
+        CoreInternal = {
+            Hull = {
+                -- Type = "LightweightHull",
+                Specification = "Eagle",
+                Size = 1,
+                Class = "L",
+            },
+            Thrusters = {
+                Size = 1,
+                Class = "E",
+            },
+        }
     }
 
     --Create a new ship component called 'shipClass' from the 'shipModule.new' constructer, passing in the cloned ship and the ship's internal modules as arguments
     local shipClass = shipModule.new(shipInstance, shipModules)
+    
+    shipClass.shipInstance:PivotTo(game.Workspace.ShipSpawnPosition.CFrame)
+    shipClass.shipInstance.Parent = workspace
+
     print(shipClass)
+    --shipClass.modules.Thrusters:Boost()
+
+    ReplicatedStorage.Events.ShipRelated.BoardShip:FireClient(player, shipClass)
 end)

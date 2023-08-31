@@ -2,12 +2,28 @@ local modules = {
 
     CoreInternal = {
 
+        Hull = {
+
+            Eagle = {
+
+                Size_1 = {
+
+                    Class_L = {
+                        Mass = 40_000;
+                        Integrity = 120;
+                    }
+                }
+            }
+        },
+
         Thrusters = {
 
             Size_1 = {
 
-                Class_D = {
+                Class_E = {
                     Mass = 2_000;
+                    Integrity = 55;
+
                     OptimalMass = 60_000;
                     MaximumMass = 85_000;
                     OptimalMassSpeed = 200;
